@@ -1,12 +1,16 @@
 class UsersController < ApplicationController
 
+  def login
+    render "login"
+  end
+
   def new
-    @user = User.new
+    @users = User.all
   end
 
 
   def create
-    
+
   end
 
 
@@ -17,6 +21,10 @@ class UsersController < ApplicationController
 
   def delete
 
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   private

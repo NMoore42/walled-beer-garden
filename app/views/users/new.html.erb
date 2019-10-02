@@ -1,7 +1,4 @@
-<%= if @errors %>
-  <% @errors.each do |err| %>
-    <p><%= err %></p>
-  <% end %>
+<h1>Register User Page</h1>
+<% @users.each do |user| %>
+  <p><%= user.name %> => <%= user.email %></p>
 <% end %>
-
-<%= form_with @user %>
